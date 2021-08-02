@@ -110,6 +110,14 @@
 # print([i[0] for i in ls])
 
 #--16-- Reverse the order of list using slicing
-ls=[1,2,3,4,5]
-ls2=ls[::-1]
-print(ls,ls2)
+# ls=[1,2,3,4,5]
+# ls2=ls[::-1]
+# print(ls,ls2)
+
+#--17-- find max without using max()
+ls=[2,3,4,24,6,67,324]
+max=0
+for i in ls:
+    if max < i:
+        max=i
+print(max)
