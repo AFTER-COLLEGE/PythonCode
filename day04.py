@@ -21,13 +21,45 @@
 #         k.reverse()
 
 ##   MINI_MAX_SUM PROBLEM   ##
-arr=[1,2,3,4,5]
-arr.sort()
-minsum=0
-maxsum=0
-for i in range(4):
-    minsum+=arr[i]
-print(minsum,end=" ")
-for i in range(4,0,-1):
-    maxsum+=arr[i]
-print(maxsum)
+# arr=[1,2,3,4,5]
+# arr.sort()
+# minsum=0
+# maxsum=0
+# for i in range(4):
+#     minsum+=arr[i]
+# print(minsum,end=" ")
+# for i in range(4,0,-1):
+#     maxsum+=arr[i]
+# print(maxsum)
+
+##     BIRTHDAY CAKE CANDELS    ##
+
+
+import math
+import os
+import random
+import re
+import sys
+
+
+def birthdayCakeCandles(candles):
+    k=max(candles)
+    count=0
+    for i in candles:
+        if i == k:
+            count+=1
+    return count
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    candles_count = int(input().strip())
+
+    candles = list(map(int, input().rstrip().split()))
+
+    result = birthdayCakeCandles(candles)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+
